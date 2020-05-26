@@ -72,7 +72,7 @@ UP.gene <- rownames(nrDEG)[which((nrDEG$adj.P.Val < 0.05) & (nrDEG$logFC > 0))]
 DOWN.gene <- rownames(nrDEG)[which((nrDEG$adj.P.Val < 0.05) & (nrDEG$logFC < 0))]
 
 # 识别driver gene
-Driver.gene <- c(intersect(UP.gene, Amp.gene), intersect(DOWN.gene, Amp.gene))
+Driver.gene <- c(intersect(UP.gene, Amp.gene), intersect(DOWN.gene, Del.gene))
 
 # 功能富集分析
 library(clusterProfiler)
